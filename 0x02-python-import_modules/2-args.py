@@ -4,6 +4,10 @@ if __name__ == "__main__":
     argumentLength = len(sys.argv)
     if argumentLength == 1:
         print("{} arguments.".format(argumentLength - 1))
+        break
+    elif argumentLength == 2:
+        print("{} argument:".format(argumentLength - 1))
     else:
-        for i in range(1: argumentLength):
-            print(f'{i}: {sys.argv[i]}')
+        print("{} arguments:".format(argumentLength - 1))
+    for i in range(1: argumentLength):
+        print(f'{i}: {sys.argv[i]}')
