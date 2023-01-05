@@ -4,5 +4,5 @@ if __name__ == "__main__":
     argumentLength = len(sys.argv) - 1
     sum = 0
     for i in range(argumentLength):
-        sum += sys.argv[i + 1]
+        sum += int(sys.argv[i + 1])
     print(f'{sum}')
