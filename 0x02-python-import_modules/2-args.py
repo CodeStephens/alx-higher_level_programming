@@ -6,4 +6,4 @@ if __name__ == "__main__":
         if i == 0:
             continue
         else:
-            print(f'{i}: {sys.argv[i]}'}
+            print(f'{i}: {sys.argv[i]}')
