@@ -1,0 +1,25 @@
+"""
+
+>>> add_function(3,6)
+9
+>>> add_function(-1,1)
+0
+>>> add_function(2, -3.4)
+-1
+>>> add_function(2.1,6.2)
+8
+>>> add_function("a",9)
+Traceback (most recent call last):
+TypeError: a must be an integer or b must be an integer
+>>> add_function(2i+1,3.2)
+Traceback (most recent call last):
+TypeError: a must be an integer or b must be an integer
+"""
+
+def add_function(a, b=98):
+	""" adds two given values (either integer or float) together """
+	if ((not isintance(a, int)) and (not isintance(a, float))):
+		raise TypeError("a must be an integer or b must be an integer")
+	if ((not isintance(b, int)) and (not isintance(b, float))):
+		raise TypeError("a must be an integer or b must be an integer")
+	return (a + b)
