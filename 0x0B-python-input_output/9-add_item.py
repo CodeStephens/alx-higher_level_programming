@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# 9-add_item.py
-# Brennan D Baraban <375@holbertonschool.com>
-"""Add all arguments to a Python list and save them to a file."""
+""" Add all arguments to a Python list and save them to a file."""
 import sys
 
 if __name__ == "__main__":

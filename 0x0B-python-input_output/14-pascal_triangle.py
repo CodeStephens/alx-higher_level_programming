@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# 14-pascal_triangle.py
-# Brennan D Baraban <375@holbertonschool.com>
-"""Defines a Pascal's Triangle function."""
+""" Defines a Pascal's Triangle function."""
 
 
 def pascal_triangle(n):

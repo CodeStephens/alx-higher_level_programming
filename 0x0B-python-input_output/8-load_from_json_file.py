@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# 8-load_from_json_file.py
-# Brennan D Baraban <375@holbertonschool.com>
-"""Defines a JSON file-reading function."""
+""" Defines a JSON file-reading function."""
 import json
 
 
