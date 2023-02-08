@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 1-number_of_lines.py
-# Brennan D Baraban <375@holbertonschool.com>
 """Defines a text file line-counting function."""
 
 
