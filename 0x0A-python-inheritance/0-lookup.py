@@ -1,4 +1,4 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 """
 Defines the lookup method/function with the object attribute
 """
