@@ -7,5 +7,5 @@ if (args.length === 0) {
 } else if (isNaN(args[0])) {
   console.log('Not a number');
 } else {
-  console.log(parseInt(args[0]));
+  console.log('My number:' + ' ' + parseInt(args[0]));
 }
