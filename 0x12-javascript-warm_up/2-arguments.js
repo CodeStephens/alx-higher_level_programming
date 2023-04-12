@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// Script prints distinct message based on the number of arguments passed
 const process = require('process');
 let args = process.argv;
 if (args.length <= 2) {
