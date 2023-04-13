@@ -2,9 +2,10 @@
 // Script prints distinct message based on the number of arguments passed
 const process = require('process');
 const cArguments = process.argv.slice(2);
+console.log(cArguments);
 let count = 0;
 let i = 0;
-while (cArguments[i] != null) {
+while (cArguments[i] != (null || undefined)) {
   count++;
   i++;
 }
