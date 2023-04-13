@@ -4,7 +4,7 @@ const process = require('process');
 const cArguments = process.argv.slice(2);
 let count = 0;
 let i = 0;
-while (cArguments[i] != (null || undefined)) {
+while (cArguments[i] !== (null || undefined)) {
   count++;
   i++;
 }
