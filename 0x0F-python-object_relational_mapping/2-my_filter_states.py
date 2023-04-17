@@ -9,7 +9,7 @@ import MySQLdb
 from sys import argv
 
 try:
-# establishing a database connection
+    # establishing a database connection
     if __name__ == '__main__':
         db = MySQLdb.connect(
             host='localhost',
