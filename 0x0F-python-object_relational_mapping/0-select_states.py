@@ -18,10 +18,10 @@ if __name__ == '__main__':
     # creating an environment for implementation of database queries
     cursor = db.cursor()
 
-    # executing MYSAL query to list all states
+    # executing MYSQL query to list all states
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
-    # fetch and printing out each data row from the database
+    # fetch and print out each data row from the database
     rows = cursor.fetchall()
     for row_s in rows:
         print(row_s)
