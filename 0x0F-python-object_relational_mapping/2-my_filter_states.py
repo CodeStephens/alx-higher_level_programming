@@ -8,30 +8,34 @@ Python script listing states correspodnding to a state searched keyword
 import MySQLdb
 from sys import argv
 
+try:
 # establishing a database connection
-if __name__ == '__main__':
-    db = MySQLdb.connect(
-        host='localhost',
-        port=3306,
-        user=argv[1],
-        passwd=argv[2],
-        db=argv[3])
+    if __name__ == '__main__':
+        db = MySQLdb.connect(
+            host='localhost',
+            port=3306,
+            user=argv[1],
+            passwd=argv[2],
+            db=argv[3])
 
-    searchedWord = argv[4]
+        searchedWord = argv[4]
 
-    # creating an environment for implementation of database queries
-    cursor = db.cursor()
+        # creating an environment for implementation of database queries
+        cursor = db.cursor()
 
-    # executing MYSQL query to list all states
-    cursor.execute("SELECT * FROM states\
-            WHERE name = '{}' \
-            ORDER BY states.id ASC".format(searchedWord))
+        # executing MYSQL query to list all states
+        cursor.execute("SELECT * FROM states\
+                WHERE name = '{}' \
+                ORDER BY states.id ASC".format(searchedWord))
 
-    # fetch and print out each data row from the database
-    rows = cursor.fetchall()
-    for row_s in rows:
-        print(row_s)
+        # fetch and print out each data row from the database
+        rows = cursor.fetchall()
+        for row_s in rows:
+            print(row_s)
 
+except MySQLdb.Error as e:
+    print("Error connecting to MYSQL database: {}".format(e))
+finally:
     # closing connection
     cursor.close()
     db.close()
