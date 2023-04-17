@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Python script listing all states from a database hbtn_0e_0_usa
+"""
+Python script listing all states from a database hbtn_0e_0_usa
+"""
 
 
 # import needed module for the functionality of the script's purpose
