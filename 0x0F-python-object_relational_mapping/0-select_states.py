@@ -19,12 +19,12 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     # executing MYSAL query to list all states
-    cursor.execute("SELECT * FROM states ORDER BY state.id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     # fetch and printing out each data row from the database
     rows = cursor.fetchall()
     for row_s in rows:
-        print(row)
+        print(row_s)
 
     # closing connection
     cursor.close()
