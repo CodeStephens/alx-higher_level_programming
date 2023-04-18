@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # executing MYSQL query to list all cities in ascending order of cities.id
     # using parameterized query to fend off SQL injection
     cursor.execute("SELECT cities.name FROM cities\
-            INNER JOIN states ON cities.state_id = states.id\
+            INNER JOIN states ON states.id = cities.state_id\
             WHERE states.name = %s\
             ORDER BY cities.id ASC", (stateName, ))
 
