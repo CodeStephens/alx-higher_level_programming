@@ -36,6 +36,7 @@ if __name__ == '__main__':
     rows = cursor.fetchall()
     for row_s in rows:
         print(row_s[0], end=", " if row_s != rows[-1] else "")
+    print('\n')
 
     # closing connection
     cursor.close()
