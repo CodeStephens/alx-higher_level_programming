@@ -29,7 +29,7 @@ if __name__ == '__main__':
     # using parameterized query to fend off SQL injection
     cursor.execute("SELECT cities.name FROM cities\
             INNER JOIN states ON cities.state_id = states.id\
-            WHERE states.name LIKE BINARY %s\
+            WHERE states.name = %s\
             ORDER BY cities.id ASC", (stateName, ))
 
     # fetch and print out each data row from the database
