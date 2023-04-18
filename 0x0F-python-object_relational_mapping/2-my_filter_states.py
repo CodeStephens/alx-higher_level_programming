@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     # executing MYSQL query to list all states
     cursor.execute("SELECT * FROM states\
-            WHERE name = '{}' \
+            WHERE name LIKE BINARY '{}' \
             ORDER BY states.id ASC".format(searchedWord))
 
     # fetch and print out each data row from the database
