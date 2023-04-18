@@ -17,7 +17,8 @@ if __name__ == '__main__':
         passwd=argv[2],
         db=argv[3])
 
-    # keyword to be searched for
+    # keyword to be searched for particularly with the intention to safeguard
+    # from MySQL injection
     searchedWord = (argv[4], )
 
     # creating an environment for implementation of database queries
