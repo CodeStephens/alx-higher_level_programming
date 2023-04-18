@@ -26,16 +26,16 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     # executing MYSQL query to list all cities in ascending order of cities.id
+    # using parameterized query to fend off SQL injection
     cursor.execute("SELECT cities.name FROM cities\
             INNER JOIN states ON cities.state_id = states.id\
             WHERE states.name LIKE BINARY %s\
-            ORDER BY cities.id ASC", (stateName,))
+            ORDER BY cities.id ASC", (stateName, ))
 
     # fetch and print out each data row from the database
     rows = cursor.fetchall()
     for row_s in rows:
         print(row_s[0], end=", " if row_s != rows[-1] else "")
-    print('\n')
 
     # closing connection
     cursor.close()
