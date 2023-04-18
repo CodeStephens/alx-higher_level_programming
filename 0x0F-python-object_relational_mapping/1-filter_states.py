@@ -21,8 +21,8 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     # executing MYSQL query to list all states
-    cursor.execute(".Join([SELECT * FROM states WHERE name LIKE 'N%'\
-            ORDER BY states.id ASC])")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'\
+            ORDER BY states.id ASC")
 
     # fetch and print out each data row from the database
     rows = cursor.fetchall()
