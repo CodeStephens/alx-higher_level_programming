@@ -20,7 +20,7 @@ if __name__ == '__main__':
         db=argv[3])
 
     # name of state whose list of cities is being sought for
-    stateName = (argv[4], )
+    stateName = argv[4]
 
     # creating an environment for implementation of database queries
     cursor = db.cursor()
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     cursor.execute("SELECT cities.name FROM cities\
             INNER JOIN states ON cities.state_id = states.id\
             WHERE states.name LIKE BINARY %s\
-            ORDER BY cities.id ASC", stateName)
+            ORDER BY cities.id ASC", (stateName,))
 
     # fetch and print out each data row from the database
     rows = cursor.fetchall()
