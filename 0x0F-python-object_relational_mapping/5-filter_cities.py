@@ -34,8 +34,7 @@ if __name__ == '__main__':
 
     # fetch and print out each data row from the database
     rows = cursor.fetchall()
-    for row_s in rows:
-        print(row_s[0], end=", " if row_s != rows[-1] else "\n")
+    print(", ".join(row_s[0] for row_s in rows))
 
     # closing connection
     cursor.close()
