@@ -13,6 +13,9 @@ Base = declarative_base()
 
 
 class State(Base):
+    """"
+    Declaration of class to mimick a table in the SQL database
+    """
     __tablename__ = 'states'
     id = Column("id", Integer, primary_key=True, autoincrement=True,
                 nullable=False, unique=True)
