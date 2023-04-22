@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This python module seeks to use sqlalchemy ORM in interacting with a mysql
+database
+"""
 
 from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String
