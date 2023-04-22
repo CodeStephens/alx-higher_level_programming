@@ -3,6 +3,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import declarative_base
+from sys import argv
 
 Base = declarative_base()
 
@@ -15,5 +16,6 @@ class State(Base):
     name = Column("name", String(128), nullable=False)
 
 
-engine = create_engine('mysql://root:Mestika1*@localhost:3306/hbtn_0e_6_usa')
+engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+    argv[1], argv[2], argv[3]))
 Base.metadata.create_all(engine)
