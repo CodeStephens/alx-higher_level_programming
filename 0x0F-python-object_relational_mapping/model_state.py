@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import declarative_base
@@ -8,8 +10,8 @@ Base = declarative_base()
 class State(Base):
     __tablename__ = 'states'
 
-    tid = Column("id", Integer, primary_key=True, autoincrement=True,
-                 nullable=False)
+    id = Column("id", Integer, primary_key=True, autoincrement=True,
+                nullable=False)
     name = Column("name", String(128), nullable=False)
 
 
