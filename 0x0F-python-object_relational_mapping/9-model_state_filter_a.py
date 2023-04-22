@@ -15,11 +15,16 @@ if __name__ == '__main__':
         exit()
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         argv[1], argv[2], argv[3]))
+    Base.metadata.create_all(engine)
+
+    # create a connection Session
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name.like('%a%')).order_by
-    (State.id)
+    # quering the database for all states with letter 'a'
+    states = session.query(State).filter(State.name.like('%a%')).\
+        order_by(State.id)
 
+    # printing the result
     for state in states:
         print(f'{state.id}: {state.name}')
