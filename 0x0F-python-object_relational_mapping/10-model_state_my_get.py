@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This python module returns the state id of a given state name from 
+This python module returns the state id of a given state name from
 hbtn_0e_6_usa using sqlalchemy ORM in interacting with the database
 """
 
@@ -17,14 +17,17 @@ if __name__ == '__main__':
         argv[1], argv[2], argv[3]))
     Base.metadata.create_all(engine)
 
-    stateSearchName = argv[4]
+    stateSearchName = (argv[4],)
 
     # create a connection Session
     Session = sessionmaker(bind=engine)
     session = Session()
 
     # quering the database in search of a given state name
-    states = session.query(State).filter(State.name.in_([stateSearchName, ]))
+    states = session.query(State).filter_by(name=stateSearchName).first()
 
     # printing the result
-    print(State[0].id)
+    if states:
+        print(states.id)
+    else:
+        print("Not found")
