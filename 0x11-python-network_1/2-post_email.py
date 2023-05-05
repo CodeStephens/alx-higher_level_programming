@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script sends a POST request to a URL 
+This script sends a POST request to a URL
 """
 import urllib.request
 from sys import argv
