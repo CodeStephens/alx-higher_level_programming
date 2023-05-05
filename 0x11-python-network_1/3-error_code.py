@@ -14,4 +14,4 @@ if __name__ == "__main__":
             feedback = response.read()
             print(feedback.decode('utf-8'))
     except URLError as e:
-        print('Error code ', e.code)
+        print('Error code: ', e.code)
