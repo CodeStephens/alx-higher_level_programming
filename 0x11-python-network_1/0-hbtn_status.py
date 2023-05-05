@@ -5,7 +5,9 @@ This Python script fetches `https://alx-intranet.hbtn.io/status`
 import urllib.request
 
 
-if __name__ = '__main__':
+if __name__ == "__main__":
+    """ scripts should be executed when imported """
+
     url = "https://alx-intranet.hbtn.io/status"
 
     with urllib.request.urlopen(url) as response:
