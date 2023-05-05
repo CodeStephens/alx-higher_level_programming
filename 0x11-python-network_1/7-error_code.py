@@ -7,7 +7,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    html_ response = requests.get(argv[1])
+    html_response = requests.get(argv[1])
     if html_response.status_code >= 400:
         print("Error code:{}".format(html_response.status_code))
     else:
