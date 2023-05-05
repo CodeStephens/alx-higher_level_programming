@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This Python script fetches `https://alx-intranet.hbtn.io/status`
+This Python script fetches `https://alx-intranet.hbtn.io/status
 """
 import urllib.request
 
