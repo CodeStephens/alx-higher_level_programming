@@ -23,6 +23,6 @@ response = requests.get(url, auth=(username, password), headers=headers)
 if response.status_code == 200:
     # Print the user ID
     user_id = response.json()['id']
-    print(f"Your user ID is: {user_id}")
+    print(f"{user_id}")
 else:
     print("Failed to get user ID. Check your credentials and try again.")
