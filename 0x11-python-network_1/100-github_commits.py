@@ -2,11 +2,11 @@
 """
 This Python script fetches the last 10 commits of a repository ("rails") by user ("rails") in GitHub using the GitHub API.
 """
+from requests import get
+from sys import argv
 
 
 if __name__ == "__main__":
-    from request import get
-    from sys import argv
     """
     using GitHub API to fetch commit history of a repository
     """
