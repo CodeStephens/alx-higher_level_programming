@@ -5,7 +5,7 @@ user (rails) in Github using GitHub API
 """
 from requests import get
 from sys import argv
-
+""" GitHub API """
 
 if __name__ == "__main__":
     """ using GitHub API to fetch commit history of a repository """
