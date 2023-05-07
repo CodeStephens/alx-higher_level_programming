@@ -3,7 +3,7 @@
 This python script displays the last 10 commits of a repository (rails) by
 user (rails) in Github using GitHub API
 """
-import requests
+from requests import get
 from sys import argv
 
 
