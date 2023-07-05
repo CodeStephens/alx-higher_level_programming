@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This Python script fetches the last 10 commits of a repository ("rails") by user ("rails") in GitHub using the GitHub API.
+This Python script fetches the last 10 commits of a repository ("rails") by
+user ("rails") in GitHub using the GitHub API.
 """
 from requests import get
 from sys import argv
