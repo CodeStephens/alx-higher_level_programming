@@ -5,11 +5,13 @@ authentication credentials (password and username)
 """
 import requests
 from sys import argv
+from requests import auth
 
 
-if __name__ == '__main_':
-    url = f'https://api.github.com/user/{argv[1]}'
+if __name__ == '__main__':
+    url = 'https://api.github.com/user'
+    headers = {'Accept': 'application/vnd.github.v3+json'}
     username = argv[1]
     password = argv[2]
-    response = requests.get(url, auth=auth.HTTPBasicAuth(username, password))
+    response = requests.get(url, auth=auth.HTTPBasicAuth(username, password), headers=headers)
     print(response.json().get('id'))
