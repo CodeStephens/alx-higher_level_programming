@@ -13,5 +13,6 @@ if __name__ == '__main__':
     headers = {'Accept': 'application/vnd.github.v3+json'}
     username = argv[1]
     password = argv[2]
-    response = requests.get(url, auth=auth.HTTPBasicAuth(username, password), headers=headers)
+    response = requests.get(url, auth=auth.HTTPBasicAuth(username, password),\
+            headers=headers)
     print(response.json().get('id'))
