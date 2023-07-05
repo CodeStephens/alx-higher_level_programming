@@ -14,7 +14,8 @@ if __name__ == "__main__":
 
     url = 'https://api.github.com/repos/{}/{}/commits'.format(argv[2], argv[1])
     response = get(url)
+    lenOfCommits = len(response.json())
     commits = response.json()
-    for i in range(0, 10):
+    for i in range(0, lenOfCommits):
         print("{}: {}".format(commits[i].get('sha'), commits[i].get('commit').
                               get('author').get('name')))
