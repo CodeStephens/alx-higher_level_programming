@@ -16,6 +16,8 @@ if __name__ == "__main__":
     response = get(url)
     lenOfCommits = len(response.json())
     commits = response.json()
+    if lenOfCommits >= 10:
+        lenOfCommits = 10
     for i in range(0, lenOfCommits):
         print("{}: {}".format(commits[i].get('sha'), commits[i].get('commit').
                               get('author').get('name')))
